@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner (System.in);
+		
+		int X, total;
+		
+		X = sc.nextInt();
+		
+		total = X * 2;
+		
+		System.out.printf("%d minutos%n", total);
+		
+		sc.close();
+
+		
+	}
+
+}
