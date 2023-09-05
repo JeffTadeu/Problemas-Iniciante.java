@@ -1,0 +1,73 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+
+	Locale.setDefault(Locale.US);
+	Scanner sc = new Scanner (System.in);
+	
+	double x = sc.nextDouble();
+	
+	double oneHundred = (int)x / 100;
+	double rest = x % 100;
+	
+	double fifty = (int)rest / 50;
+	rest = rest % 50;
+	
+	double twenty = (int)rest / 20;
+	rest = rest % 20;
+	
+	double ten = (int)rest / 10;
+	rest =  rest % 10;
+	
+	double five = (int) rest / 5;
+	rest = rest % 5;
+	
+	double two = (int) rest / 2;
+	rest = rest % 2;
+	
+	double coinOneDolar = (int) rest / 1;
+	rest = rest % 1;
+	
+	double coinFifty = rest / 0.50;
+	rest = rest % 0.50;
+	
+	double coinTwentyFive = rest / 0.25;
+	rest = rest % 0.25;
+	
+	double coinTen = rest / 0.10;
+	rest = rest % 0.10;
+	
+	double coinFive = rest / 0.05;
+	rest = rest % 0.05;
+	
+	BigDecimal bd = new BigDecimal(rest).setScale(2, RoundingMode.HALF_EVEN);
+	
+	double coinOneCent = bd.doubleValue() / 0.01;
+	rest = rest % 0.01;
+
+	System.out.println("NOTAS:");
+	System.out.println((int) oneHundred + " nota(s) de R$ 100.00");
+	System.out.println((int) fifty + " nota(s) de R$ 50.00");
+	System.out.println((int) twenty + " nota(s) de R$ 20.00");
+	System.out.println((int) ten + " nota(s) de R$ 10.00");
+	System.out.println((int) five + " nota(s) de R$ 5.00");
+	System.out.println((int) two + " nota(s) de R$ 2.00");
+	System.out.println("MOEDAS:");
+	System.out.println((int) coinOneDolar + " moeda(s) de R$ 1.00");
+	System.out.println((int) coinFifty + " moeda(s) de R$ 0.50");
+	System.out.println((int) coinTwentyFive + " moeda(s) de R$ 0.25");
+	System.out.println((int) coinTen + " moeda(s) de R$ 0.10");
+	System.out.println((int) coinFive + " moeda(s) de R$ 0.05");
+	System.out.println((int) coinOneCent + " moeda(s) de R$ 0.01");
+	
+	sc.close();
+		
+	}
+
+}
