@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+		
+	Scanner sc = new Scanner (System.in);
+	
+	int hourI, hourF, duration;
+	hourI = sc.nextInt();
+	hourF = sc.nextInt();
+	
+	
+	if (hourI > hourF || hourF == hourI) {
+		duration = Math.abs(hourF - (hourI- 24));
+		System.out.printf("O JOGO DUROU %d HORA(S)%n", duration);
+	}
+	else {
+		duration = Math.abs(hourI - hourF);
+		System.out.printf("O JOGO DUROU %d HORA(S)%n", duration);
+	}
+	
+	sc.close();
+	
+	}
+
+}
