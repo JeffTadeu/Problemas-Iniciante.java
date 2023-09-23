@@ -6,34 +6,29 @@ public class Main {
 	public static void main(String[] args) {
 
 	Scanner sc = new Scanner (System.in);
-
+	
 	String word1 = sc.next();
 	String word2 = sc.next();
 	String word3 = sc.next();
 	
-	
-	System.out.println(word1);
-	System.out.println(word2);
-	System.out.println(word3);
-	
-	if ( word1 == "vertebrado") {
-		if ( word2 == "ave") {
-			if ( word3 == "carnivoro") {
+	if ( word1.equals("vertebrado") ) {
+		if ( word2.equals("ave")) {
+			if ( word3.equals("carnivoro")) {
 				System.out.println("aguia");
 			}
-			else if ( word3 == "onivoro") {
+			else if ( word3.equals("onivoro") ) {
 				System.out.println("pomba");
 			}
 			else {
 				System.out.println("Não possuimos essa categoria");
 			}
 		}
-		else if ( word2 == "mamifero"){
-			if ( word3 == "onivoro") {
+		else if ( word2.equals("mamifero")){
+			if ( word3.equals("onivoro")) {
 				System.out.println("homem");
 			}
-			else if ( word3 == "herbivoro") {
-				System.out.println("herbivoro");
+			else if ( word3.equals("herbivoro") ) {
+				System.out.println("vaca");
 			}
 			else {
 				System.out.println("Não possuimos essa categoria");
@@ -43,23 +38,23 @@ public class Main {
 			System.out.println("Não possuimos essa categoria");
 		}
 	}
-	else if ( word1 == "invertebrado"){
-		if ( word2 == "inseto") {
-			if ( word3 == "hematofago") {
+	else if ( word1.equals("invertebrado")){
+		if ( word2.equals("inseto")) {
+			if ( word3.equals("hematofago")) {
 				System.out.println("pulga");
 			}
-			else if ( word3 == "herbivoro") {
+			else if ( word3.equals("herbivoro")) {
 				System.out.println("lagarta");
 			}
 			else {
 				System.out.println("Não possuimos essa categoria");
 			}
 		}
-		else if ( word2 == "anelideo"){
-			if ( word3 == "hematofago") {
+		else if ( word2.equals("anelideo")){
+			if ( word3.equals("hematofago")) {
 				System.out.println("sanguessuga");
 			}
-			else if ( word3 == "onivoro") {
+			else if ( word3.equals("onivoro")) {
 				System.out.println("minhoca");
 			}
 			else {
@@ -78,3 +73,5 @@ public class Main {
 	sc.close();
 	}
 } 
+
+
