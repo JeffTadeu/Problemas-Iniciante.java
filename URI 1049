@@ -1,0 +1,80 @@
+import java.util.Scanner;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+
+	Scanner sc = new Scanner (System.in);
+
+	String word1 = sc.next();
+	String word2 = sc.next();
+	String word3 = sc.next();
+	
+	
+	System.out.println(word1);
+	System.out.println(word2);
+	System.out.println(word3);
+	
+	if ( word1 == "vertebrado") {
+		if ( word2 == "ave") {
+			if ( word3 == "carnivoro") {
+				System.out.println("aguia");
+			}
+			else if ( word3 == "onivoro") {
+				System.out.println("pomba");
+			}
+			else {
+				System.out.println("Não possuimos essa categoria");
+			}
+		}
+		else if ( word2 == "mamifero"){
+			if ( word3 == "onivoro") {
+				System.out.println("homem");
+			}
+			else if ( word3 == "herbivoro") {
+				System.out.println("herbivoro");
+			}
+			else {
+				System.out.println("Não possuimos essa categoria");
+			}
+		}
+		else {
+			System.out.println("Não possuimos essa categoria");
+		}
+	}
+	else if ( word1 == "invertebrado"){
+		if ( word2 == "inseto") {
+			if ( word3 == "hematofago") {
+				System.out.println("pulga");
+			}
+			else if ( word3 == "herbivoro") {
+				System.out.println("lagarta");
+			}
+			else {
+				System.out.println("Não possuimos essa categoria");
+			}
+		}
+		else if ( word2 == "anelideo"){
+			if ( word3 == "hematofago") {
+				System.out.println("sanguessuga");
+			}
+			else if ( word3 == "onivoro") {
+				System.out.println("minhoca");
+			}
+			else {
+				System.out.println("Não possuimos essa categoria");
+			}
+		}
+		else {
+			System.out.println("Não possuimos essa categoria");
+		}
+	}
+	else {
+		System.out.println("Não possuimos essa categoria");
+	}
+	
+	
+	sc.close();
+	}
+} 
