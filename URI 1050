@@ -1,0 +1,38 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+
+	Locale.setDefault(Locale.US);
+	Scanner sc = new Scanner (System.in);
+	
+	double count;
+	double wage = sc.nextDouble();
+	
+	if ( wage <= 2000) {
+		System.out.println("Isento");
+	}
+	else if ( wage >= 2000.01 && wage <= 3000) {
+		count = wage - 2000.00;
+		count *= 0.08;
+		System.out.printf("R$ %.2f%n", count);
+	}
+	else if ( wage >= 3000.01 && wage <= 4500) {
+		count =  wage - 3000.00;
+		count *= 0.18;
+		count = 80 + count;
+		System.out.printf("R$ %.2f%n", count);
+	}
+	else {
+		count =  wage - 4500.00;
+		count *= 0.28;
+		count = 80 + 270 + count;
+		System.out.printf("R$ %.2f%n", count);
+	}
+	
+	sc.close();
+	}
+} 
