@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+	
+	Scanner sc = new Scanner (System.in);
+	
+	int age, sumAge, cont;
+	
+	
+	sumAge = 0;
+	cont = 0;
+	
+	age = sc.nextInt();
+	while (age >= 0) {
+		sumAge += age;
+		cont += 1;
+		age = sc.nextInt();
+	}
+	
+	double media = (double) sumAge / cont;
+	
+	System.out.printf("%.2f%n", media);
+	
+	sc.close();
+	}
+} 
+
