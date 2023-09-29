@@ -1,0 +1,55 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+	
+	
+	Scanner sc = new Scanner (System.in);
+		
+	int x = 1;
+	int grenal = 0;
+	int vG = 0;
+	int vI = 0;
+	int empate = 0;
+	int inter = 0;
+	int gremio = 0;
+	
+	
+	while ( x == 1) {
+		inter = sc.nextInt();
+		gremio = sc.nextInt();
+		grenal += 1;
+		if ( gremio > inter) {
+			vG +=1;
+		}
+		else if ( inter > gremio ){
+			vI += 1;
+		}
+		else {
+			empate += 1;
+		}
+		System.out.println("Novo grenal (1-sim 2-nao)");
+		x = sc.nextInt();
+	}
+	
+	System.out.printf("%d grenais%n", grenal);
+	System.out.printf("Inter:%d%n", vI);
+	System.out.printf("Gremio:%d%n", vG);
+	System.out.printf("Empates:%d%n", empate);
+	if ( vI > vG ) {
+		System.out.println("Inter venceu mais");
+	}
+	else if ( vG > vI ) {
+		System.out.println("Gremio venceu mais");
+	}
+	else {
+		System.out.println("Nao houve vencedor");
+	}
+	
+	
+	sc.close();
+	}
+} 
