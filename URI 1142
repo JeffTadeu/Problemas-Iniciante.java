@@ -1,0 +1,31 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+	
+	Locale.setDefault(Locale.US);
+	Scanner sc = new Scanner (System.in);
+	
+	int N = sc.nextInt();
+
+	int x = 1;
+	int y = 2;
+	int z = 3;
+	
+	for ( int i =  1; i <= N ; i++ ) {
+		if (i == 1) {
+			System.out.printf("%d %d %d PUM%n", x, y ,z);
+		}
+		else {
+			x += 4;
+			y += 4;
+			z += 4;
+			System.out.printf("%d %d %d PUM%n", x, y, z);
+		}
+		 }
+	
+	}
+	}
