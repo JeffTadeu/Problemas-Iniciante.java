@@ -1,0 +1,35 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+	
+	Locale.setDefault(Locale.US);
+	Scanner sc = new Scanner (System.in);
+	
+	int n = sc.nextInt();
+	int sum = 0;
+	
+	for ( int i = 1; i <= n; i++) {
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		
+		int impar = 0;
+		
+		while ( impar < y) {
+			if ( x % 2 != 0) {
+				sum += x;
+				impar += 1;
+			}
+			x += 1;
+		}
+		
+		System.out.println(sum);	
+		sum = 0;
+	}
+		
+	}
+	
+}
