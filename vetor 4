@@ -1,0 +1,43 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+	
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner (System.in);
+		
+
+		int n = sc.nextInt();
+		double soma = 0;
+		double media = 0;
+		
+		
+		double [] x = new double [n];
+		
+		for ( int i = 0 ; i < n ;  i++) {
+			x[i] = sc.nextDouble();
+			soma += x[i];
+		}
+		
+		media = soma/n;
+		
+		System.out.println(media);
+		
+		for ( int i = 0 ; i < n ; i++) {
+			if ( x[i] < media) {
+				System.out.println(x[i]);
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+	}
+	
+}
