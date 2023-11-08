@@ -1,0 +1,41 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner (System.in);
+		
+		
+		int n = sc.nextInt();
+		
+		String [] students = new String [n];
+		double [] n1 = new double [n];
+		double [] n2 = new double [n];
+		double [] exam = new double [n];
+		
+		for ( int i = 0 ; i < n ; i++) {
+			students[i] = sc.next();
+			n1[i] = sc.nextDouble();
+			n2[i] = sc.nextDouble();
+		}
+		
+		double media = 0;
+		
+		for ( int i = 0 ; i < n ; i++) {
+			media = (n1[i] + n2[i])/2;
+			exam[i] =  media;
+		}
+		
+		System.out.println("Alunos aprovados:");
+		for ( int i = 0 ; i < n ; i++) {
+			if (exam[i] >= 6) {
+				System.out.println(students[i]);
+			}
+		} 
+	}
+	
+}
