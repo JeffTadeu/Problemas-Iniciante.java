@@ -1,0 +1,62 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner (System.in);
+		
+		int n = sc.nextInt();
+		double [] height = new double [n];
+		char [] gender = new char [n];
+		
+		for ( int i = 0 ; i < n ; i++) {
+			height[i] = sc.nextDouble();
+			gender[i] = sc.next().charAt(0);
+			sc.nextLine();
+		}
+		
+		double shortest = 5.00;
+		double tallest = -1;
+		
+		for ( int i = 0 ; i < n ; i++) {
+			if(height[i] < shortest) {
+				shortest = height[i];
+			}  
+		}
+		
+		System.out.printf("Menor altura = %.2f%n", shortest);
+		
+		for ( int i = 0 ; i < n ; i++) {
+			if(height[i] > tallest) {
+				tallest = height[i];
+			}
+		}
+		System.out.printf("Maior altura = %.2f%n", tallest);
+		
+		double soma = 0;
+		double media = 0;
+		int countF = 0;
+		int countM = 0;
+		
+		for ( int i = 0 ; i < n ; i++) {
+			if ( gender[i] == 'F' ) {
+				soma += height[i];
+				countF += 1;
+			}
+			else {
+				countM += 1;
+			}
+		}
+		
+		media = soma / countF;
+		
+		System.out.printf("Mediadas alturas das mulheres = %.2f%n", media);
+		System.out.printf("Numero de homens = %d", countM);
+	}
+	
+}
+
