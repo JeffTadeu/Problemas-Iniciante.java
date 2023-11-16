@@ -1,0 +1,83 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner (System.in);
+		
+		int n = sc.nextInt();
+		
+		double [][] mat = new double [n][n];
+		
+		for ( int i = 0 ; i < n ; i++) {
+			for ( int j = 0 ; j < n ; j++) {
+				mat[i][j] = sc.nextDouble();
+			}
+		}
+		
+		int indice = sc.nextInt();
+		
+		int coluna = sc.nextInt();
+		
+		
+		// SOMA
+		double soma = 0;
+		
+		for ( int i = 0 ; i < n ; i ++) {
+			for ( int j = 0 ; j < n ; j ++) {
+				if ( mat[i][j] > 0 ) {
+					soma += mat[i][j];
+				}
+			}
+		}
+		System.out.println("SOMA DOS POSIVITOS: " + soma);
+		
+		// IMPRIMIR O ÍNDICE DESEJADO
+		System.out.print("LINHA ESCOLHIDA: ");
+		for ( int i = indice ; i < indice + 1 ; i++) {
+			for ( int j = 0 ; j < n ; j++) {
+				System.out.print(mat[i][j] + " ");
+			}
+		}
+		
+		System.out.println();
+		
+		// IMPRIMIR A COLUNA DESEJADA
+		System.out.print("COLUNA DESEJADA: ");
+		for ( int i = 0 ; i < n ; i++) {
+			for ( int j = coluna ; j < coluna + 1 ; j++) {
+				System.out.print(mat[i][j] + " ");
+			}
+		}
+		
+		System.out.println();
+		
+		// DIAGONAL PRINCIPAL
+		System.out.print("DIAGONAL PRINCIPAL: ");
+		for ( int i = 0 ; i < n ; i ++) {
+			for ( int j = i ; j < i + 1 ; j++ ) {
+				System.out.print(mat[i][j] + " ");
+			}
+		}
+		
+		System.out.println();
+		
+		// ALTERANDO A MATRIZ
+		System.out.println("MATRIZ ALTERADA: ");
+		for ( int i = 0 ; i < n ; i++) {
+			for ( int j = 0 ; j < n ; j ++) {
+				if ( mat[i][j] < 0 ) {
+					mat[i][j] = mat[i][j] * mat[i][j];
+				}
+				System.out.print(mat[i][j] + " ");
+			}
+			System.out.println();
+		}
+		
+		
+	}
+
+}
