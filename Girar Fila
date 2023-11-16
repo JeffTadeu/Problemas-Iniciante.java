@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		Scanner sc = new Scanner (System.in);
+		
+		int m = sc.nextInt();
+		int n = sc.nextInt();
+		
+		int [][] fila = new int [m + 1][n];
+		
+		for ( int i = 1 ; i <= m ; i++) {
+			for ( int j = 0 ; j < n ; j++) {
+				fila[i][j] = sc.nextInt();
+			}
+		}
+		
+		int girarFila = sc.nextInt();
+		
+		
+		int [] fila2 = new int [n];
+		
+		for ( int i = girarFila ; i < girarFila + 1 ; i++) {
+			for ( int j = 0 ; j < n ; j ++) {
+				if ( j == 0) {
+					fila2[0] = fila[girarFila][n - 1];
+				}
+				else {
+					fila2[j] = fila[i][j - 1];
+				}
+			}
+		}
+		
+		for ( int i = girarFila ; i < girarFila + 1 ; i++) {
+			for ( int j = 0 ; j < n ; j ++) {
+				fila[i][j] = fila2[j];
+				}
+			}
+		
+		
+		for ( int i = 1 ; i <= m   ; i++) {
+			for ( int j = 0 ; j < n ; j ++) {
+				System.out.print(fila[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+}
