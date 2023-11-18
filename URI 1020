@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner (System.in);
+		
+		int n = sc.nextInt();
+		int seconds = 0;
+		int minutes = 0;
+		int hour = 0;
+		
+		if ( n < 60) {
+			System.out.printf("0:0:%d%n", n);
+		}
+		else if ( n >= 60 && n < 3600) {
+			minutes = n / 60;
+			seconds = n % 60;
+			System.out.printf("0:%d:%d%n", minutes, seconds);
+		}
+		else {
+			hour = n / 3600;
+			minutes = ( n - (hour * 3600) ) /60 ;
+			seconds = n % 60;
+			System.out.printf("%d:%d:%d%n", hour, minutes, seconds);
+		}
+		
+		
+	}
+
+}
