@@ -1,0 +1,32 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner (System.in);
+		
+		double a = sc.nextDouble();
+		double b = sc.nextDouble();
+		double c = sc.nextDouble();
+		
+		double delta =  (b * b) - 4 * a * c;
+		double bhaskara1 = 0;
+		double bhaskara2 = 0;
+		
+		if ( delta < 0 || a == 0) {
+			System.out.println("Impossivel calcular");
+		}
+		else {
+			bhaskara1 = (-b + Math.sqrt(delta)) / (2 * a);
+			System.out.printf("R1 = %.5f%n", bhaskara1);
+			bhaskara2 = (-b - Math.sqrt(delta)) / (2 * a);
+			System.out.printf("R2 = %.5f%n", bhaskara2);
+		}
+		
+		
+		
+	}
+}
